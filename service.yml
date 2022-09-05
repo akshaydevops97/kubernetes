@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: saphnelo-service
+  labels: 
+    app: saphnelo
+spec: 
+  type: LoadBalancer
+  
+  selector: 
+    matchLabels: 
+      app: saphnelo  
+  
+  ports: 
+    NodePort: 8081
+    port: 80
+    targetPort: 8080
+...

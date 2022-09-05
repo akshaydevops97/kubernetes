@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: saphnelo-deployment
+  labels: 
+    app: saphnelo
+spec:
+  replicas: 3
+  selector:
+     MatchLabels: 
+       app: saphnelo
+  template: 
+    metadata: 
+       labels:
+         app: saphnelo
+    spec:  
+       containers:
+        - name: saphnelo-app
+          image: akshaydevops/saphnelo:latest
+          ports: 
+            - containerPort: 8080
+...
