@@ -19,5 +19,5 @@ spec:
         - name: saphnelo-app
           image: akshaydevops/saphnelo:latest
           ports: 
-            - containerPort: 8080
+            - containerPort: 8081
 ...
